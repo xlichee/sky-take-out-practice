@@ -5,7 +5,7 @@ package com.sky.constant;
  */
 public class AutoFillConstant {
     /**
-     * 实体类中的方法名称
+     * 实体类中的方法名称，配合AOP实现自动填充功能
      */
     public static final String SET_CREATE_TIME = "setCreateTime";
     public static final String SET_UPDATE_TIME = "setUpdateTime";
