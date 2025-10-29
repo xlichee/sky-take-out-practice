@@ -11,5 +11,8 @@ import java.io.Serializable;
 public class UserLoginDTO implements Serializable {
 
     private String code;
+    private String avatar;
+    private String name;
+    private Integer sex;
 
 }

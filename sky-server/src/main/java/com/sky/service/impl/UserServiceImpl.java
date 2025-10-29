@@ -47,8 +47,21 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.getByOpenid(openid);
 
         if(user==null){
-            user = User.builder().openid(openid).createTime(LocalDateTime.now()).build();
+            // 创建新用户，保存用户信息
+            user = User.builder()
+                .openid(openid)
+                .name(userLoginDTO.getName())
+                .avatar(userLoginDTO.getAvatar())
+                .sex(String.valueOf(userLoginDTO.getSex()))
+                .createTime(LocalDateTime.now())
+                .build();
             userMapper.insert(user);
+        } else if (userLoginDTO.getName() != null && userLoginDTO.getAvatar() != null) {
+            // 更新已有用户的信息
+            user.setName(userLoginDTO.getName());
+            user.setAvatar(userLoginDTO.getAvatar());
+            user.setSex(String.valueOf(userLoginDTO.getSex()));
+            userMapper.update(user);
         }
 
 

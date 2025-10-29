@@ -35,7 +35,8 @@ public class UserController {
     @PostMapping("/login")
     @ApiOperation("用户登录")
     public Result<UserLoginVO> login(@RequestBody UserLoginDTO userLoginDTO) {
-        log.info("用户登录，userLoginDTO: {}", userLoginDTO.getCode());
+        //log.info("用户登录，userLoginDTO: code={}, name={}, avatar={}, sex={}",
+                //userLoginDTO.getCode(), userLoginDTO.getName(), userLoginDTO.getAvatar(), userLoginDTO.getSex());
 
         User user = userService.wxLogin(userLoginDTO);
 
