@@ -135,26 +135,17 @@ sky:
 2. 配置好application.yml和application-dev.yml
 3. 运行SkyApplication.java启动后端服务
 
-### 管理端启动
-```bash
-cd project-rjwm-admin-vue-ts
-npm install
-npm run serve
-```
+
 
 ### 微信小程序启动
 1. 使用微信开发者工具打开mp-weixin目录
 2. 在工具中配置您的AppID
 3. 编译运行小程序
 
-## 功能特性
-
-- 管理端：员工管理、分类管理、菜品管理、套餐管理、订单管理等
-- 用户端：微信登录、商品浏览、购物车、下单、支付、订单查询等
 
 ## 注意事项
 
 - 请确保Redis服务已启动
 - 请确保MySQL服务已启动
-- 微信小程序需要在微信开发者工具中调试
+- 微信小程序需要在微信开发者工具中调试,project.config.json里面注意替换成自己的appId
 - 阿里云OSS需要自行配置
